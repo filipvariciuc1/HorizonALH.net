@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formsubmit.co; frame-src https://www.google.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact Horizon Assisted Living Home</title>
 <meta name="description" content="Write to Horizon Assisted Living Home in Glendale, Arizona. Ask about Directed Care, Memory Care, availability, pricing, or book a tour.">
 <link rel="canonical" href="https://www.horizonalh.net/contact/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Horizon Assisted Living Home">
+<meta property="og:title" content="Contact Horizon Assisted Living Home">
+<meta property="og:description" content="Write to Horizon Assisted Living Home in Glendale, Arizona. Ask about Directed Care, Memory Care, availability, pricing, or book a tour.">
+<meta property="og:url" content="https://www.horizonalh.net/contact/">
+<meta property="og:image" content="https://www.horizonalh.net/images/d95c2f_895de3824c544cb294f5c0589e330dcd.jpg">
+<meta property="og:image:alt" content="The front of Horizon Assisted Living Home in Glendale, Arizona">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -61,7 +70,7 @@
       </div>
     </div>
 
-    <form id="contact-form">
+    <form id="contact-form" method="post" action="https://formsubmit.co/info@horizonalh.net">
       <label>First name<input name="first" autocomplete="given-name" required></label>
       <label>Last name<input name="last" autocomplete="family-name"></label>
       <label class="full">Your email<input type="email" name="email" autocomplete="email" required></label>
@@ -72,8 +81,10 @@
       </label>
       <label class="full">Message<textarea name="message" required placeholder="Tell us a little about your loved one and what kind of care you are looking for."></textarea></label>
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="Website inquiry">
+      <input type="hidden" name="_template" value="table">
       <button class="btn btn-solid" type="submit">Send message</button>
-      <p class="form-note">Your message goes straight to info@horizonalh.net. The text message box is optional, and leaving it unchecked does not stop us replying.</p>
+      <p class="form-note" role="status">Your message goes straight to info@horizonalh.net. The text message box is optional, and leaving it unchecked does not stop us replying.</p>
     </form>
   </div>
 </main>
@@ -85,51 +96,7 @@
   </div>
 </footer>
 
-<script>
-const rev = s => s.split('').reverse().join('');
-const dialNum = '0114767' + '206' + '1+';
-document.querySelectorAll('.tel-link').forEach(a => {
-  a.addEventListener('click', e => { e.preventDefault(); location.href = 'tel:' + rev(dialNum); });
-});
-document.getElementById('year').textContent = new Date().getFullYear();
-
-document.getElementById('contact-form').addEventListener('submit', async e => {
-  e.preventDefault();
-  const f = e.target;
-  const sendBtn = f.querySelector('button[type="submit"]');
-  const note = f.querySelector('.form-note');
-  const fullName = (f.first.value + ' ' + f.last.value).trim();
-  sendBtn.disabled = true;
-  const restLabel = sendBtn.textContent;
-  sendBtn.textContent = 'Sending...';
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/info@horizonalh.net', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        name: fullName,
-        email: f.email.value,
-        phone: f.phone.value,
-        sms_consent: f.sms_consent.checked
-          ? 'YES, opted in to SMS at ' + new Date().toISOString()
-          : 'No SMS consent given',
-        message: f.message.value,
-        _subject: 'Website inquiry from ' + fullName,
-        _template: 'table',
-        _captcha: 'false',
-        _honey: f._honey.value
-      })
-    });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    f.reset();
-    note.textContent = 'Thank you! Your message has been sent.';
-  } catch (err) {
-    note.textContent = 'The message could not be sent. Please email us directly at info@horizonalh.net.';
-  }
-  sendBtn.disabled = false;
-  sendBtn.textContent = restLabel;
-});
-</script>
+<script src="/assets/site.js"></script>
 
 </body>
 </html>

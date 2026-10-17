@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formsubmit.co; frame-src https://www.google.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Horizon Assisted Living Home | Glendale, AZ</title>
-<meta name="description" content="Horizon Assisted Living is a residential long-term care home in Glendale, Arizona offering Directed Care, Memory Care, and Respite Care. Caregivers on site 24 hours a day. Call us to schedule a tour.">
+<meta name="description" content="Horizon Assisted Living is a residential care home in Glendale, Arizona offering Directed Care, Memory Care and Respite Care, with caregivers on site 24/7.">
 <meta name="google-site-verification" content="SwzI7YU_c0t4ABcbBbzdRYFiKVDfi1QiPVnWjIIp4-M">
 <link rel="canonical" href="https://www.horizonalh.net/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Horizon Assisted Living Home">
 <meta property="og:title" content="Horizon Assisted Living Home | Glendale, AZ">
-<meta property="og:description" content="Horizon Assisted Living is a residential long-term care home in Glendale, Arizona offering Directed Care, Memory Care, and Respite Care. Caregivers on site 24 hours a day. Call us to schedule a tour.">
+<meta property="og:description" content="Horizon Assisted Living is a residential care home in Glendale, Arizona offering Directed Care, Memory Care and Respite Care, with caregivers on site 24/7.">
 <meta property="og:url" content="https://www.horizonalh.net/">
 <meta property="og:image" content="https://www.horizonalh.net/images/d95c2f_895de3824c544cb294f5c0589e330dcd.jpg">
 <meta property="og:image:alt" content="The front of Horizon Assisted Living Home in Glendale, Arizona">
@@ -64,7 +66,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" data-font-css href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap"></noscript>
 <style>
 :root{
@@ -599,7 +601,7 @@ footer small{font-size:.85rem}
     </div>
     <dialog id="lightbox" aria-label="Photo viewer">
       <button type="button" class="lb-close" id="lb-close" aria-label="Close photo viewer">&#215;</button>
-      <figure class="lb-figure"><img src="" alt=""></figure>
+      <figure class="lb-figure"><img alt=""></figure>
     </dialog>
   </section>
 
@@ -631,7 +633,7 @@ footer small{font-size:.85rem}
           </div>
         </div>
       </div>
-      <form id="contact-form">
+      <form id="contact-form" method="post" action="https://formsubmit.co/info@horizonalh.net">
         <label>First name<input name="first" autocomplete="given-name" required></label>
         <label>Last name<input name="last" autocomplete="family-name"></label>
         <label class="full">Your email<input type="email" name="email" autocomplete="email" required></label>
@@ -642,13 +644,15 @@ footer small{font-size:.85rem}
         </label>
         <label class="full">Message<textarea name="message" required placeholder="Tell us a little about your loved one and what kind of care you are looking for."></textarea></label>
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="Website inquiry">
+        <input type="hidden" name="_template" value="table">
         <button class="btn btn-solid" type="submit">Send message</button>
-        <p class="form-note">Your message goes straight to info@horizonalh.net. The text message box is optional, and leaving it unchecked does not stop us replying.</p>
+        <p class="form-note" role="status">Your message goes straight to info@horizonalh.net. The text message box is optional, and leaving it unchecked does not stop us replying.</p>
       </form>
     </div>
     <div class="wrap">
       <div class="map-frame">
-        <iframe title="Horizon Assisted Living Home - 19728 N 79th Ave, Glendale, AZ 85308" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=19728+N+79th+Ave%2C+Glendale%2C+AZ+85308&output=embed"></iframe>
+        <iframe title="Map of Horizon Assisted Living Home, 19728 N 79th Ave, Glendale, AZ 85308" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=19728+N+79th+Ave%2C+Glendale%2C+AZ+85308&output=embed"></iframe>
       </div>
     </div>
   </section>
@@ -662,122 +666,7 @@ footer small{font-size:.85rem}
   </div>
 </footer>
 
-<script>
-const rev = s => s.split('').reverse().join('');
-const dialNum = '0114767' + '206' + '1+';
-document.querySelectorAll('.tel-link').forEach(a => {
-  a.addEventListener('click', e => { e.preventDefault(); location.href = 'tel:' + rev(dialNum); });
-});
-document.getElementById('year').textContent = new Date().getFullYear();
-
-const box = document.getElementById('lightbox');
-const boxImg = box.querySelector('.lb-figure img');
-const grid = document.getElementById('gallery-grid');
-const tiles = Array.from(grid.querySelectorAll('button'));
-const moreWrap = document.getElementById('gallery-more');
-const moreBtn = document.getElementById('gallery-more-btn');
-const STEP = 12;
-let shown = tiles.filter(t => !t.hidden).length;
-
-function syncMore() {
-  if (shown >= tiles.length) moreWrap.hidden = true;
-}
-function revealMore() {
-  const next = tiles.slice(shown, shown + STEP);
-  next.forEach((tile, i) => {
-    tile.hidden = false;
-    tile.style.setProperty('--d', i);
-    tile.classList.add('tile-in');
-    tile.addEventListener('animationend', () => tile.classList.remove('tile-in'), { once: true });
-  });
-  shown += next.length;
-  syncMore();
-}
-syncMore();
-moreBtn.addEventListener('click', revealMore);
-
-tiles.forEach(btn => {
-  btn.addEventListener('click', () => {
-    boxImg.src = btn.dataset.full;
-    boxImg.alt = btn.querySelector('img').alt;
-    box.showModal();
-  });
-});
-box.addEventListener('click', e => { if (e.target !== boxImg) box.close(); });
-box.addEventListener('close', () => { boxImg.removeAttribute('src'); boxImg.alt = ''; });
-
-document.getElementById('contact-form').addEventListener('submit', async e => {
-  e.preventDefault();
-  const f = e.target;
-  const sendBtn = f.querySelector('button[type="submit"]');
-  const note = f.querySelector('.form-note');
-  const fullName = (f.first.value + ' ' + f.last.value).trim();
-  sendBtn.disabled = true;
-  const restLabel = sendBtn.textContent;
-  sendBtn.textContent = 'Sending...';
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/info@horizonalh.net', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        name: fullName,
-        email: f.email.value,
-        phone: f.phone.value,
-        sms_consent: f.sms_consent.checked
-          ? 'YES, opted in to SMS at ' + new Date().toISOString()
-          : 'No SMS consent given',
-        message: f.message.value,
-        _subject: 'Website inquiry from ' + fullName,
-        _template: 'table',
-        _captcha: 'false',
-        _honey: f._honey.value
-      })
-    });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    f.reset();
-    note.textContent = 'Thank you! Your message has been sent.';
-  } catch (err) {
-    note.textContent = 'The message could not be sent. Please email us directly at info@horizonalh.net.';
-  }
-  sendBtn.disabled = false;
-  sendBtn.textContent = restLabel;
-});
-/* section rail: scroll progress + active section */
-const navAnchors = Array.from(document.querySelectorAll('.rail a'));
-const progress = document.getElementById('scroll-progress');
-const spyTargets = navAnchors
-  .map(a => ({ link: a, el: document.querySelector(a.getAttribute('href')) }))
-  .filter(t => t.el);
-let spyQueued = false;
-
-function syncNav() {
-  spyQueued = false;
-  const y = window.scrollY;
-  let current = null;
-  for (const t of spyTargets) {
-    if (t.el.getBoundingClientRect().top <= 140) current = t;
-  }
-  if (y + window.innerHeight >= document.documentElement.scrollHeight - 8) {
-    current = spyTargets[spyTargets.length - 1];
-  }
-  navAnchors.forEach(a => {
-    const on = current && a === current.link;
-    a.classList.toggle('active', !!on);
-    if (on) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
-  });
-
-  if (progress) {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    progress.style.transform = 'scaleY(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')';
-  }
-}
-function queueNavSync() {
-  if (!spyQueued) { spyQueued = true; requestAnimationFrame(syncNav); }
-}
-window.addEventListener('scroll', queueNavSync, { passive: true });
-window.addEventListener('resize', queueNavSync, { passive: true });
-syncNav();
-</script>
+<script src="/assets/site.js"></script>
 
 </body>
 </html>
