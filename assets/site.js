@@ -88,6 +88,10 @@ if (contactForm) {
       if (data.success === false || data.success === 'false') throw new Error(data.message || 'not sent');
       f.reset();
       note.textContent = 'Thank you! Your message has been sent.';
+      // Google Ads conversion "Website tour request" (gtag loaded by /assets/gtag.js)
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', { send_to: 'AW-18538933720/huYRCMz73LkdENjbhohF' });
+      }
     } catch (err) {
       note.textContent = 'The message could not be sent. Please email us directly at info@horizonalh.net.';
     }
