@@ -28,6 +28,7 @@
   "url": "https://www.horizonalh.net/",
   "description": "Horizon Assisted Living is a residential long-term care home in Glendale, Arizona offering Directed Care, Memory Care, and Respite Care. Caregivers on site 24 hours a day. Call us to schedule a tour.",
   "image": "https://www.horizonalh.net/images/d95c2f_895de3824c544cb294f5c0589e330dcd.jpg",
+  "telephone": "+1-602-767-4110",
   "email": "info@horizonalh.net",
   "address": {
     "@type": "PostalAddress",
@@ -187,12 +188,15 @@ section{scroll-margin-top:28px}
 /* hero */
 .hero{padding:44px 0 72px}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);margin:18px 0 20px}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);margin:0 0 20px}
+.hero h1 .eyebrow{font-size:1.14rem;line-height:1.65;color:var(--ink-soft);margin-bottom:18px;max-width:34em;text-wrap:wrap}
 .hero h1 em{font-style:normal;color:var(--pine)}
 .hero p{max-width:34em;color:var(--ink-soft);font-size:1.14rem}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
 .hero-note{margin-top:22px;font-size:.95rem;color:var(--ink-soft)}
 .hero-note strong{color:var(--ink)}
+.nowrap{white-space:nowrap}
+.hero-note .hero-tours{display:block;margin-top:6px}
 picture{display:contents}
 .hero-photo img,.about-photos img{height:auto}
 .hero-photo{position:relative}
@@ -255,6 +259,18 @@ picture{display:contents}
 .card.wide{grid-column:span 1}
 @media (max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){.cards{grid-template-columns:1fr}.services{padding:72px 0}}
+.fit{background:#FCFBF7;border:1px solid var(--line);border-radius:20px;padding:40px 44px 30px;margin-top:20px}
+.fit-head{margin-bottom:26px}
+.fit-head h3{font-size:1.5rem;margin-top:12px}
+.fit-list{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.fit-list>div{padding:22px 0;border-top:1px solid var(--line)}
+.fit-list dt{font-family:var(--display);font-weight:640;font-size:1.1rem;line-height:1.2;margin-bottom:6px;text-wrap:balance}
+.fit-list dd{color:var(--ink-soft);font-size:.98rem;text-wrap:pretty}
+.fit-list strong,.fit-note strong{color:var(--ink);font-weight:600}
+.fit-list a{color:var(--pine);text-decoration:none;border-bottom:1px solid var(--sun-soft);white-space:nowrap}
+.fit-list a:hover{border-bottom-color:var(--sun)}
+.fit-note{border-top:1px solid var(--line);padding-top:18px;font-size:.98rem;color:var(--ink-soft);text-wrap:pretty}
+@media (max-width:820px){.fit{padding:28px 24px 22px}.fit-list{grid-template-columns:1fr}}
 
 /* daily life */
 .daily{background:var(--pine-deep);color:#EFF2EA;padding:96px 0}
@@ -277,6 +293,25 @@ picture{display:contents}
 }
 @media (max-width:960px){.daily-cols{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.daily-cols{grid-template-columns:1fr}.daily{padding:72px 0}}
+
+/* good to know: what the monthly price covers, and what families ask */
+.cost{background:var(--sand);border-bottom:1px solid var(--line);padding:96px 0}
+.cost h2{font-size:clamp(1.8rem,3.2vw,2.5rem);margin:16px 0 44px}
+.cost-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.cost-card ul{list-style:none}
+.cost-card li{padding:7px 0 7px 20px;position:relative;font-size:.98rem}
+.cost-card li::before{
+  content:"";position:absolute;left:0;top:16px;width:9px;height:5px;
+  border-radius:9px 9px 0 0;background:var(--sun);
+}
+.cost-card p{border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+.cost-card a,.cost-qa a{color:var(--pine);text-decoration:none;border-bottom:1px solid var(--sun-soft);white-space:nowrap}
+.cost-card a:hover,.cost-qa a:hover{border-bottom-color:var(--sun)}
+.cost-qa>div{padding:20px 0;border-top:1px solid var(--line)}
+.cost-qa>div:first-child{border-top:0;padding-top:0}
+.cost-qa h3{font-size:1.1rem;margin-bottom:4px}
+.cost-qa p{color:var(--ink-soft);font-size:.98rem;text-wrap:pretty}
+@media (max-width:820px){.cost-grid{grid-template-columns:1fr;gap:36px}.cost{padding:72px 0}.cost h2{margin-bottom:32px}}
 
 /* gallery */
 .gallery{padding:96px 0}
@@ -328,6 +363,19 @@ dialog#lightbox::backdrop{background:rgba(30,40,33,.88)}
 }
 .lb-close:hover{background:#fff}
 .lb-close:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+
+/* reviews */
+.reviews{background:var(--sage);border-top:1px solid var(--line);padding:96px 0}
+.reviews h2{font-size:clamp(1.8rem,3.2vw,2.5rem);margin:16px 0 40px}
+.reviews-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:28px}
+.review{margin:0;background:#FCFBF7;border:1px solid var(--line);border-radius:20px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:24px}
+.review blockquote{margin:0}
+.review blockquote p{margin:0;font-family:var(--serif);font-size:1.04rem;line-height:1.62;color:var(--ink);text-wrap:pretty}
+.review figcaption{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-family:var(--display);font-weight:600;font-size:1rem;color:var(--pine-deep)}
+.reviews-more{margin:32px 0 0;font-family:var(--display);font-weight:600;font-size:1rem}
+.reviews-more a{color:var(--pine);text-decoration:none;border-bottom:1px solid var(--sun-soft)}
+.reviews-more a:hover{border-bottom-color:var(--sun)}
+@media (max-width:1000px){.reviews{padding:72px 0}.reviews h2{margin-bottom:32px}.reviews-grid{grid-template-columns:1fr;gap:20px}.review{padding:26px 24px 22px}}
 
 /* cta band */
 .band{background:var(--sand);border-block:1px solid var(--line);padding:72px 0}
@@ -417,14 +465,13 @@ footer small{font-size:.85rem}
             <span class="hero-brand-sub">Assisted Living Home</span>
           </span>
         </a>
-        <p class="eyebrow">Residential care in Glendale, Arizona</p>
-        <h1>Care that feels like home, <em>because it is one</em></h1>
-        <p>Horizon Assisted Living is a residential long-term care home offering Directed Care and Memory Care. A real house on a quiet street, with caregivers on site around the clock and room for your loved one to keep living their best life.</p>
+        <h1><span class="eyebrow">Assisted living home in Glendale, Arizona</span> A real home <em>for your loved one</em></h1>
+        <p>Horizon Assisted Living is a residential long-term care home offering Directed Care and Memory Care. It is a real house on a quiet street, and caregivers are here around the clock.</p>
         <div class="hero-ctas">
           <a class="btn btn-solid" href="#contact">Schedule a tour</a>
           <a class="btn btn-ghost tel-link" href="#call" aria-label="Call Horizon Assisted Living at (602) 767-4110">(602) 767-4110</a>
         </div>
-        <p class="hero-note"><strong>19728 N 79th Ave, Glendale, AZ 85308</strong> &middot; tours welcome any day, just call ahead</p>
+        <p class="hero-note"><strong>19728 N 79th Ave, Glendale, AZ 85308</strong><br>In Arrowhead Ranch, minutes from Peoria and Sun City<br><span class="hero-tours">Tours welcome any day, just call ahead</span></p>
         <nav class="rail" aria-label="Sections">
           <span class="rail-progress" aria-hidden="true"><i id="scroll-progress"></i></span>
           <a href="#about">Our Home</a>
@@ -463,9 +510,9 @@ footer small{font-size:.85rem}
       </div>
       <div>
         <p class="eyebrow">Our home</p>
-        <h2>A real house, kept the way a home should be</h2>
-        <p>Horizon Assisted Living is a residential long-term care provider in Glendale, Arizona. We are a full-service assisted living home offering <strong>Directed Care services and Memory Care</strong>, in a house built for living rather than a facility built for beds. We welcome both private pay and ALTCS residents.</p>
-        <p>Our home is modified to contain all of the resources necessary to meet the needs of your loved ones as they continue to change: walk-in showers, accessible bathrooms, wide doorways, and a garden made for slow afternoons outside.</p>
+        <h2>A house that feels like home</h2>
+        <p>Horizon Assisted Living is a residential long-term care provider in Glendale, Arizona. We are a licensed, <span class="nowrap">full-service</span> assisted living home offering <strong>Directed Care services and Memory Care</strong>, in a regular house, not a large facility. We welcome both private pay and ALTCS residents.</p>
+        <p>Our home is modified to contain all of the resources necessary to meet the needs of your loved ones as they continue to change: walk-in showers, accessible bathrooms, wide doorways, and a garden to sit out in.</p>
         <p>We are dedicated to providing a safe and comfortable home-like environment where our seniors can thrive and continue to live their best lives.</p>
       </div>
     </div>
@@ -475,14 +522,14 @@ footer small{font-size:.85rem}
     <div class="wrap">
       <div class="services-head">
         <p class="eyebrow">What we offer</p>
-        <h2>Care shaped around each resident</h2>
-        <p>A one size fits all approach does not apply to senior care. Everyone in our home is unique, so each resident's plan of care is personally crafted to suit their individual needs and preferences.</p>
+        <h2>A care plan for each resident</h2>
+        <p>A one size fits all approach does not apply to senior care. Everyone in our home is unique, so each resident's plan of care is made to fit their own needs and preferences.</p>
       </div>
       <div class="cards">
         <div class="card">
           <svg class="svc-ic" viewBox="0 0 64 64" width="80" height="80" aria-hidden="true"><g transform="translate(22 24) scale(0.92)"><path d="M-9.5 0c0-7 4-10.5 9.5-10.5S9.5-7 9.5 0v10h-19Z" fill="#5A4232" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-15 27v-7a15 13 0 0 1 30 0v7Z" fill="#5BA6A8" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="-3.2" y="4" width="6.4" height="5.5" fill="#F6CFAE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-5.5 7.5 0 15 5.5 7.5Z" fill="#3E8587" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M6.5 10.5v-2.5" stroke="#DD7440" stroke-width="1.6" stroke-linecap="round"/><rect x="4.5" y="10" width="6" height="5" rx="1" fill="#6FB8BA" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-7.5 9v3" stroke="#243029" stroke-width="1"/><rect x="-10" y="12" width="5" height="6.5" rx="1" fill="#FFFFFF" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-9 16.5h3" stroke="#7FA7C9" stroke-width="1.2"/><circle cx="-8.2" cy="1" r="2" fill="#F6CFAE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8.2" cy="1" r="2" fill="#F6CFAE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="0" cy="0" rx="8" ry="8.6" fill="#F6CFAE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-8.4" cy="4" r="1.2" fill="#E8B44A" stroke="#243029" stroke-width=".8"/><circle cx="8.4" cy="4" r="1.2" fill="#E8B44A" stroke="#243029" stroke-width=".8"/><path d="M-8.4 1C-9-6-4.5-8.8 0-8.8S9-6 8.4 1C6-1 2-3.5-1-5.5-3-3-6-1-8.4 1Z" fill="#5A4232" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="-3" cy="0.6" r="1" fill="#243029"/><circle cx="3" cy="0.6" r="1" fill="#243029"/><path d="M-.2 1.8q1 1.2-.2 1.9" fill="none" stroke="#243029" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M-2.6 4.6q2.6 2.2 5.2 0" fill="none" stroke="#C0546A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(42 27) scale(0.95)"><path d="M-15 27v-7a15 13 0 0 1 30 0v7Z" fill="#DD7440" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="-3.2" y="4" width="6.4" height="5.5" fill="#EFC29E" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-5 8 0 12.5 5 8" fill="none" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-8.2" cy="1" r="2" fill="#EFC29E" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8.2" cy="1" r="2" fill="#EFC29E" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="0" cy="0" rx="8" ry="8.6" fill="#EFC29E" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-8.4 1.5c-1.2-4 .3-7 2.6-8.2l.6 5.2Z" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M8.4 1.5c1.2-4-.3-7-2.6-8.2l-.6 5.2Z" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="-3" cy="0.6" r="1" fill="#243029"/><circle cx="3" cy="0.6" r="1" fill="#243029"/><circle cx="-3" cy="0.6" r="2.5" fill="none" stroke="#243029" stroke-width="1.1"/><circle cx="3" cy="0.6" r="2.5" fill="none" stroke="#243029" stroke-width="1.1"/><path d="M-.5 .6h1" stroke="#243029" stroke-width="1.1"/><ellipse cx="0" cy="2.6" rx="1.5" ry="1.15" fill="#EFC29E" stroke="#243029" stroke-width="1"/><path d="M-2.6 4.6q2.6 2.2 5.2 0" fill="none" stroke="#243029" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M-4 5c1.4-1.8 2.8-1.6 4-.6 1.2-1 2.6-1.2 4 .6-1.6.8-2.8.4-4 0-1.2.4-2.4.8-4 0Z" fill="#D9DBD4" stroke="#243029" stroke-width=".9" stroke-linejoin="round"/></g><path d="M55 45c0-3.4 4.6-3.4 4.6 0v18" fill="none" stroke="#5A4232" stroke-width="2.6" stroke-linecap="round"/><rect x="55.6" y="45.2" width="6.2" height="5.4" rx="2.6" fill="#EFC29E" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
           <h3>Assisted Living</h3>
-          <p>Personalized support with daily tasks, medication management, and engaging activities, with as much independence as each resident can comfortably keep.</p>
+          <p>Help with daily tasks, medication and activities. Residents keep as much independence as they comfortably can.</p>
         </div>
         <div class="card">
           <svg class="svc-ic" viewBox="0 0 64 64" width="80" height="80" aria-hidden="true"><circle cx="54" cy="10" r="5" fill="#F7C873" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M4 27 18 14l14 13" fill="#DD7440" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="7" y="26" width="22" height="20" fill="#F2ECDE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="10.5" y="31" width="6" height="6" fill="#FFFFFF" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><g transform="translate(40 30) scale(1.0)"><path d="M-15 27v-7a15 13 0 0 1 30 0v7Z" fill="#8A63B8" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="-3.2" y="4" width="6.4" height="5.5" fill="#F6CFAE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-5 8 0 12.5 5 8" fill="none" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-8.2" cy="1" r="2" fill="#F6CFAE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8.2" cy="1" r="2" fill="#F6CFAE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="0" cy="0" rx="8" ry="8.6" fill="#F6CFAE" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-8.4" cy="4" r="1.2" fill="#FFFFFF" stroke="#243029" stroke-width=".8"/><circle cx="8.4" cy="4" r="1.2" fill="#FFFFFF" stroke="#243029" stroke-width=".8"/><circle cx="-8" cy="-1" r="3.2" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-7.2" cy="-5" r="3.2" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-4.5" cy="-8.2" r="3.2" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-0.8" cy="-9.4" r="3.2" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="3" cy="-8.8" r="3.2" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="6" cy="-6.4" r="3.2" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="7.8" cy="-2.4" r="3.2" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="-3" cy="0.6" r="1" fill="#243029"/><circle cx="3" cy="0.6" r="1" fill="#243029"/><circle cx="-3" cy="0.6" r="2.5" fill="none" stroke="#243029" stroke-width="1.1"/><circle cx="3" cy="0.6" r="2.5" fill="none" stroke="#243029" stroke-width="1.1"/><path d="M-.5 .6h1" stroke="#243029" stroke-width="1.1"/><path d="M-.2 1.8q1 1.2-.2 1.9" fill="none" stroke="#243029" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M-2.6 4.6q2.6 2.2 5.2 0" fill="none" stroke="#C0546A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
@@ -492,7 +539,7 @@ footer small{font-size:.85rem}
         <div class="card">
           <svg class="svc-ic" viewBox="0 0 64 64" width="80" height="80" aria-hidden="true"><g transform="translate(26 33) scale(1.15)"><path d="M-15 27v-7a15 13 0 0 1 30 0v7Z" fill="#7FA7C9" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="-3.2" y="4" width="6.4" height="5.5" fill="#F3C7A4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-5 8 0 12.5 5 8" fill="none" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M0 10.5-4.6 7.6v5.8ZM0 10.5l4.6-2.9v5.8Z" fill="#DD7440" stroke="#243029" stroke-width="1.1" stroke-linejoin="round"/><circle cx="0" cy="10.5" r="1.3" fill="#DD7440" stroke="#243029" stroke-width="1.1"/><circle cx="-8.2" cy="1" r="2" fill="#F3C7A4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8.2" cy="1" r="2" fill="#F3C7A4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="0" cy="0" rx="8" ry="8.6" fill="#F3C7A4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-8.4 1.5c-1.2-4 .3-7 2.6-8.2l.6 5.2Z" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M8.4 1.5c1.2-4-.3-7-2.6-8.2l-.6 5.2Z" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="-3" cy="0.6" r="1" fill="#243029"/><circle cx="3" cy="0.6" r="1" fill="#243029"/><circle cx="-3" cy="0.6" r="2.5" fill="none" stroke="#243029" stroke-width="1.1"/><circle cx="3" cy="0.6" r="2.5" fill="none" stroke="#243029" stroke-width="1.1"/><path d="M-.5 .6h1" stroke="#243029" stroke-width="1.1"/><ellipse cx="0" cy="2.6" rx="1.5" ry="1.15" fill="#F3C7A4" stroke="#243029" stroke-width="1"/><path d="M-5.6-4.6q2.3-2.2 4.6-.6M1.6-3.9q1.8-.5 3.6 0" fill="none" stroke="#243029" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1.6 5.6q1.8-1.2 3.4-.4" fill="none" stroke="#243029" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g><circle cx="41" cy="16" r="1.5" fill="#FFFFFF" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="45" cy="12" r="2.2" fill="#FFFFFF" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="54" cy="9" r="8" fill="#7A4E86" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M51.2 6.6a2.9 2.9 0 1 1 3.9 2.7c-.8.4-1.1.9-1.1 2" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round"/><circle cx="54" cy="14.3" r="1.1" fill="#FFFFFF"/></svg>
           <h3>Memory Care</h3>
-          <p>Steady supervision and support for residents with cognitive impairments, with routines and activities tailored to promote cognitive function and quality of life.</p>
+          <p>Steady supervision and support for residents with cognitive impairments, with routines and activities planned for them.</p>
         </div>
         <div class="card">
           <svg class="svc-ic" viewBox="0 0 64 64" width="80" height="80" aria-hidden="true"><rect x="3" y="8" width="25" height="23" rx="3" fill="#FFFFFF" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M3 15v-4a3 3 0 0 1 3-3h19a3 3 0 0 1 3 3v4Z" fill="#DD7440" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M9.5 5.5v5M21.5 5.5v5" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="6.5" y="18.5" width="3.4" height="3.4" rx=".7" fill="#D9DBD4"/><rect x="11.5" y="18.5" width="3.4" height="3.4" rx=".7" fill="#2E5A45"/><rect x="16.5" y="18.5" width="3.4" height="3.4" rx=".7" fill="#2E5A45"/><rect x="21.5" y="18.5" width="3.4" height="3.4" rx=".7" fill="#2E5A45"/><rect x="6.5" y="24" width="3.4" height="3.4" rx=".7" fill="#D9DBD4"/><rect x="11.5" y="24" width="3.4" height="3.4" rx=".7" fill="#D9DBD4"/><rect x="16.5" y="24" width="3.4" height="3.4" rx=".7" fill="#D9DBD4"/><rect x="21.5" y="24" width="3.4" height="3.4" rx=".7" fill="#D9DBD4"/><circle cx="51" cy="15" r="10" fill="#FFFFFF" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M51 6.8v1.6M51 21.6v1.6M42.8 15h1.6M57.6 15h1.6" stroke="#243029" stroke-width="1.2" stroke-linecap="round"/><path d="M51 15V9.8M51 15l4 2.6" stroke="#243029" stroke-width="1.6" stroke-linecap="round"/><circle cx="51" cy="15" r="1.1" fill="#243029"/><g transform="translate(33 38) scale(1.0)"><path d="M-15 27v-7a15 13 0 0 1 30 0v7Z" fill="#D46A8C" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="-3.2" y="4" width="6.4" height="5.5" fill="#C68B65" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-5 8 0 12.5 5 8" fill="none" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-8.2" cy="1" r="2" fill="#C68B65" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8.2" cy="1" r="2" fill="#C68B65" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="0" cy="0" rx="8" ry="8.6" fill="#C68B65" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-8.4" cy="4" r="1.2" fill="#E8B44A" stroke="#243029" stroke-width=".8"/><circle cx="8.4" cy="4" r="1.2" fill="#E8B44A" stroke="#243029" stroke-width=".8"/><circle cx="0" cy="-10.5" r="3.6" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M-8.4 1C-9-6-4.5-8.8 0-8.8S9-6 8.4 1C7-3 3-5 0-5S-7-3-8.4 1Z" fill="#D9DBD4" stroke="#243029" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="-5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="5" cy="3.6" r="1.5" fill="#F2A58A" opacity=".7"/><circle cx="-3" cy="0.6" r="1" fill="#243029"/><circle cx="3" cy="0.6" r="1" fill="#243029"/><path d="M-.2 1.8q1 1.2-.2 1.9" fill="none" stroke="#243029" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M-2.6 4.6q2.6 2.2 5.2 0" fill="none" stroke="#A8455E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
@@ -510,14 +557,39 @@ footer small{font-size:.85rem}
           <p>Physicians, nurses, physical therapists, podiatrists, labs, X-rays, and even hair dressers come to the house, so residents rarely need to travel for care.</p>
         </div>
       </div>
+      <div class="fit" id="care-fit">
+        <div class="fit-head">
+          <p class="eyebrow">Which care fits</p>
+          <h3>What each kind of care means</h3>
+        </div>
+        <dl class="fit-list">
+          <div>
+            <dt>When everyday things get hard</dt>
+            <dd><strong>Assisted Living</strong> is help with everyday things: bathing, dressing, meals and moving around. Each resident has their own plan of care, and keeps as much independence as they comfortably can.</dd>
+          </div>
+          <div>
+            <dt>When it is no longer safe to be alone</dt>
+            <dd><strong>Directed Care</strong> is for someone who can no longer speak up for what they need, see danger, or call for help. Staff give steady supervision. <strong>Memory Care</strong> is more care on top of that, for someone living with dementia or another illness that slowly changes the brain, with routines and activities planned for memory loss.</dd>
+          </div>
+          <div>
+            <dt>When a caregiver needs a rest</dt>
+            <dd><strong>Respite Care</strong> is a short stay. Your loved one stays with us for a while and is well looked after, so you can rest or travel.</dd>
+          </div>
+          <div>
+            <dt>When only a little help is needed</dt>
+            <dd><strong>Independent Living</strong> is for a resident who needs little or no hands-on help, with housekeeping handled and help nearby. It is rare here, since most of our residents need more care. <a class="tel-link" href="#call">Call us</a> to ask about it.</dd>
+          </div>
+        </dl>
+        <p class="fit-note"><strong>Medication Management</strong> and <strong>Visiting Professionals</strong> are part of every kind of care.</p>
+      </div>
     </div>
   </section>
 
   <section class="daily">
     <div class="wrap">
       <p class="eyebrow">Every day at Horizon</p>
-      <h2>The small things, done daily</h2>
-      <p class="daily-lead">What a good week here actually holds, from the first medication round of the morning to live music in the living room.</p>
+      <h2>What we do every day</h2>
+      <p class="daily-lead">Here is what a normal week at the home looks like.</p>
       <div class="daily-cols">
         <div>
           <h3>Around the clock</h3>
@@ -528,7 +600,7 @@ footer small{font-size:.85rem}
           </ul>
         </div>
         <div>
-          <h3>Health, at home</h3>
+          <h3>Health care at the house</h3>
           <ul>
             <li>In-home visits by physicians and nurses</li>
             <li>Physical therapists and podiatrists</li>
@@ -537,7 +609,7 @@ footer small{font-size:.85rem}
           </ul>
         </div>
         <div>
-          <h3>Days with life in them</h3>
+          <h3>Activities</h3>
           <ul>
             <li>Weekly activities and daily exercises</li>
             <li>Crafts and memory games</li>
@@ -546,13 +618,55 @@ footer small{font-size:.85rem}
           </ul>
         </div>
         <div>
-          <h3>Comforts handled</h3>
+          <h3>Meals and housekeeping</h3>
           <ul>
             <li>Daily home cooked meals</li>
             <li>Nutritious variety and dietary considerations</li>
             <li>Complete laundry and housekeeping</li>
             <li>Handicap accessible accommodations</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cost" id="cost">
+    <div class="wrap">
+      <p class="eyebrow">Good to know</p>
+      <h2>What is included and common questions</h2>
+      <div class="cost-grid">
+        <div class="card cost-card">
+          <h3>The monthly price includes</h3>
+          <ul>
+            <li>The room and furnishings</li>
+            <li>Meals</li>
+            <li>Care</li>
+            <li>Housekeeping and laundry</li>
+            <li>Medication management</li>
+          </ul>
+          <p>We accept ALTCS and private pay. <a class="tel-link" href="#call">Call us for pricing</a>.</p>
+        </div>
+        <div class="cost-qa">
+          <div>
+            <h3>Are rooms private or shared?</h3>
+            <p>Both. We have private rooms and shared rooms.</p>
+          </div>
+          <div>
+            <h3>Can couples move in together?</h3>
+            <p>Yes. Couples are welcome.</p>
+          </div>
+          <div>
+            <h3>Can pets come?</h3>
+            <p>Pets are welcome to visit. No pets live at the home.</p>
+          </div>
+          <div>
+            <h3>Can my loved one stay when hospice care starts?</h3>
+            <p>Yes. They can stay right here with us.</p>
+          </div>
+          <div>
+            <h3>How do we start?</h3>
+            <p><a class="tel-link" href="#call">Call us</a> and come for a tour.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -609,6 +723,28 @@ footer small{font-size:.85rem}
       <button type="button" class="lb-close" id="lb-close" aria-label="Close photo viewer">&#215;</button>
       <figure class="lb-figure"><img alt=""></figure>
     </dialog>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <p class="eyebrow">Google reviews</p>
+      <h2>What families say</h2>
+      <div class="reviews-grid">
+        <figure class="review">
+          <blockquote><p>Choosing a place for my father&rsquo;s care was one of the hardest decisions I have ever made. Filip and his staff helped us tremendously through this process. Horizon has a beautiful warm environment with serene surroundings that my father came to love. The staff was incredible and treated my father like family. He felt close to the entire team and it made all the difference in the world through this challenging process.</p></blockquote>
+          <figcaption>Kim</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote><p>I found the most WONDERFUL, CARING assisted living home owner's and staff for my husband, Harvey, who had Alzheimer's. Harvey and every resident was given personalized care everyday! ... I was there everyday to see the amazing care from owner's to staff.</p></blockquote>
+          <figcaption>Debbie</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote><p>Horizon took wonderful care of our father and was a huge help to our family. Filip and the caregivers were exceptional. The house was well-kept, the food was delicious and communication was easy. We highly recommend Horizon!</p></blockquote>
+          <figcaption>Jacqueline</figcaption>
+        </figure>
+      </div>
+      <p class="reviews-more"><a href="https://maps.google.com/?cid=8962275276666028087" target="_blank" rel="noopener">Read all on Google</a></p>
+    </div>
   </section>
 
   <div class="band">
@@ -668,7 +804,7 @@ footer small{font-size:.85rem}
 <footer>
   <div class="wrap">
     <small>&copy; <span id="year">2026</span> Horizon Assisted Living Home &middot; 19728 N 79th Ave, Glendale, AZ 85308</small>
-    <small><a class="tel-link" href="#call" aria-label="Call Horizon Assisted Living at (602) 767-4110">(602) 767-4110</a> &middot; <a href="mailto:info@horizonalh.net">info@horizonalh.net</a> &middot; <a href="https://www.facebook.com/horizonalh" target="_blank" rel="noopener">Facebook</a><br><a href="/contact/">Contact</a> &middot; <a href="/messaging-terms/">Messaging Terms</a> &middot; <a href="/privacy/">Privacy Policy</a></small>
+    <small><a class="tel-link" href="#call" aria-label="Call Horizon Assisted Living at (602) 767-4110">(602) 767-4110</a> &middot; <a href="mailto:info@horizonalh.net">info@horizonalh.net</a><br><a href="/contact/">Contact</a> &middot; <a href="/messaging-terms/">Messaging Terms</a> &middot; <a href="/privacy/">Privacy Policy</a></small>
   </div>
 </footer>
 

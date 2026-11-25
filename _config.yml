@@ -1,0 +1,7 @@
+# GitHub Pages builds this repo with Jekyll. Everything listed here stays off the live site.
+exclude:
+  - GLOSSARY.md
+  - CLAUDE.md
+  - docs
+  - .scratch
+  - checks

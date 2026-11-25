@@ -1,0 +1,3 @@
+# No price on the site, shown or hidden
+
+Filip, 11/25/2026: "Yeah honestly i wouldnt want to show prices honestly". He said it after seeing that Brookdale's page for its Arrowhead Ranch home shows no price, only a "Get Pricing and Schedule a Visit" form. Senior care SEO advice says to print a starting price and to put a price range in the business data, so a future pass will want to add one back. Do not. The page says what the monthly price covers, names ALTCS and private pay, and says "Call us for pricing". The hidden business data carries no price range either, because Google can show it next to the listing. No amount goes in any copy, alt text, description or schema.
